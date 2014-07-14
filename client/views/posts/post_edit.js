@@ -9,7 +9,7 @@ Template.postEdit.events({
 
 		Posts.update(currentPostId, {$set : postProperties}, function(error){
 			if(error){
-				alert(error.reason);
+				throwErroe(error.reason);
 			}
 			else{
 				Router.go('postPage',{_id: currentPostId});

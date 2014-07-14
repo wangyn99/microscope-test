@@ -25,7 +25,7 @@ Meteor.methods({
 			userId: user._id,
 			author: user.username,
 			submitted: new Date().getTime()
-		});
+		})
 		if(! this.isSimulation){
 			var Future = Npm.require('fibers/future');
 			var future = new Future();
